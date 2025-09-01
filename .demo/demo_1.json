@@ -1,31 +1,33 @@
 {
   "$schema": "https://demotime.show/demo-time.schema.json",
-  "title": "notebook-to-app-demo",
+  "title": "demo-1",
   "description": "",
   "version": 2,
   "demos": [
     {
-      "id": "demo-mevf7xx9-klki",
-      "title": "Introduction",
+      "id": "demo-mf1jetk6-0gxj",
+      "title": "Set Up",
       "steps": [
         {
-          "action": "openSlide",
-          "path": ".demo/introduction.md"
+          "action": "deleteFile",
+          "path": "app/titanic_app.py"
+        },
+        {
+          "action": "create",
+          "path": "app/titanic_app.py",
+          "content": "# Empty file!"
         }
       ],
-      "description": "Description of the envionment in which the demo is running.",
       "icons": {
-        "start": "bell",
+        "start": "target",
         "end": ""
-      }
+      },
+      "description": "Setup for the demo."
     },
     {
       "id": "demo-mevulvne-kho1",
       "title": "Notebook",
       "steps": [
-        {
-          "action": "waitForInput"
-        },
         {
           "action": "open",
           "path": "notebooks/titanic_data_exploration.ipynb"
@@ -53,7 +55,9 @@
         {
           "action": "executeVSCodeCommand",
           "command": "workbench.action.files.saveAs",
-          "args": "/workspaces/streamlit-demo/app/titanic_app.py"
+          "args": {
+            "Uri": "/workspaces/streamlit-demo/app/titanic_app.py"
+          }
         }
       ]
     },
@@ -147,7 +151,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "27:40",
+          "position": "27:33",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -160,8 +164,8 @@
         {
           "action": "replace",
           "path": "app/titanic_app.py",
-          "content": "st.markdown(\"\"\"\n## Exploratory Data Analysis\n \nUses convention:\n- 🟢: survived\n- 🔴: died\n- **N**: number of passengers\n- **S**: survival rate\n \nWhat factors contributed towards a passenger's survival rate?\n\n\n### Women and children first?\n\nThis analysis certainly shows a general trend that females were given priority.  It's not so convicing for children!\n\"\"\")\n",
-          "position": "24:37",
+          "content": "st.markdown(\"\"\"\n## Exploratory Data Analysis\n\nWe now explore factors that appear to have contributed towards survival rates on the Titanic 🚢.\n\nKey🔑:\n- **N**=number of passengers\n- **S**=survival rate\n\"\"\")",
+          "position": "27:33",
           "highlightWholeLine": true,
           "insertTypingMode": "line-by-line"
         }
@@ -173,7 +177,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "46",
+          "position": "43",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -181,15 +185,70 @@
     },
     {
       "id": "demo-mevxj8dg-dsm0",
-      "title": "st.plot()",
+      "title": "st.plot() 1",
       "steps": [
         {
           "action": "replace",
           "path": "app/titanic_app.py",
-          "content": "st.plotly_chart(ChartingHelper.create_boxplot(titanic_passengers_cleaned, 'Sex', 'Age'))\n",
-          "position": "46",
+          "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Sex', 'Age'))",
+          "position": "43",
           "highlightWholeLine": true,
-          "insertTypingMode": "character-by-character"
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-mf1m07xz-cxl5",
+      "title": "Chart 2",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "51",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mf1m19pt-ikpn",
+      "title": "st.plot() 2",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Pclass', 'FareLog10'))",
+          "position": "51",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-mf1m3zsk-mrmz",
+      "title": "Chart 3",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "59",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mf1m4je7-ukvm",
+      "title": "st.plot() 3",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Title', 'Age'))",
+          "position": "59",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 1
         }
       ]
     },

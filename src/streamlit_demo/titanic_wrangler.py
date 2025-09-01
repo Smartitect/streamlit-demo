@@ -1,12 +1,11 @@
 import polars as pl
-import numpy as np
 import time
 from pathlib import Path
 
 class TitanicWrangler:
 
     @staticmethod
-    def load_titanic_data(data_path: str = "data/input/titanic_passengers.csv", delay_seconds: int = 5) -> pl.DataFrame:
+    def load_titanic_data(data_path: Path = Path("data/input/titanic_passengers.csv"), delay_seconds: int = 5) -> pl.DataFrame:
         """
         Load Titanic passenger data from CSV with a simulated delay for demo purposes.
         
@@ -14,9 +13,9 @@ class TitanicWrangler:
         -----------
         data_path : str
             Path to the Titanic CSV file (default: "data/input/titanic_passengers.csv")
-        delay_seconds : float
-            Number of seconds to delay (default: 3.0 for demo purposes)
-            
+        delay_seconds : int
+            Number of seconds to delay (default: 5 for demo purposes)
+
         Returns:
         --------
         pl.DataFrame
@@ -24,20 +23,13 @@ class TitanicWrangler:
         """
         # Simulate long-running operation with delay
         time.sleep(delay_seconds)
-        
-        # Convert to Path object for better path handling
-        csv_path = Path(data_path)
-        
-        # Check if file exists
-        if not csv_path.exists():
-            raise FileNotFoundError(f"Titanic data file not found: {csv_path}")
-        
+                
         # Load CSV using Polars
         try:
-            df = pl.read_csv(csv_path)
+            df = pl.read_csv(data_path)
             return df
         except Exception as e:
-            raise RuntimeError(f"Error loading Titanic data from {csv_path}: {str(e)}")
+            raise RuntimeError(f"Error loading Titanic data from {data_path}: {str(e)}")
 
     @classmethod
     def prepare_data(cls, titanic_passengers):

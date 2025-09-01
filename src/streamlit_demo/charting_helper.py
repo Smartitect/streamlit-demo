@@ -8,7 +8,7 @@ class ChartingHelper:
     """Simple prototype for creating boxplots with survival-colored points."""
     
     # Constants - all styling options as fixed values
-    POINT_SIZE = 4
+    POINT_SIZE = 6
     BOX_OPACITY = 0.7
     POINT_OPACITY = 0.6
     WIDTH = 800
@@ -16,7 +16,7 @@ class ChartingHelper:
     SURVIVAL_COLORS = {'survived': '#2E8B57', 'died': '#DC143C'}  # Green, Red
     
     @staticmethod
-    def create_boxplot(data: pl.DataFrame, x_axis: str, y_axis: str) -> go.Figure:
+    def create_strip_boxplot(data: pl.DataFrame, x_axis: str, y_axis: str) -> go.Figure:
         """
         Create boxplot with survival-colored points.
         

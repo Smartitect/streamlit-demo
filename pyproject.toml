@@ -5,13 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "ipykernel>=6.30.1",
-    "nbformat>=5.10.4",
-    "numpy>=2.3.2",
-    "plotly>=6.3.0",
-    "polars>=1.32.3",
-    "pytest>=8.4.1",
-    "streamlit>=1.48.1",
+    "ipykernel",
+    "plotly",
+    "polars",
+    "pytest",
+    "streamlit",
 ]
 [build-system]
 requires = ["hatchling"]
