@@ -191,6 +191,9 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 
+# UV cache directory
+.uv-cache/
+
 # PyPI configuration file
 .pypirc
 

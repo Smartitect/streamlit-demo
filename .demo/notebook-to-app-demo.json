@@ -1,0 +1,216 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "notebook-to-app-demo",
+  "description": "",
+  "version": 2,
+  "demos": [
+    {
+      "id": "demo-mevf7xx9-klki",
+      "title": "Introduction",
+      "steps": [
+        {
+          "action": "openSlide",
+          "path": ".demo/introduction.md"
+        }
+      ],
+      "description": "Description of the envionment in which the demo is running.",
+      "icons": {
+        "start": "bell",
+        "end": ""
+      }
+    },
+    {
+      "id": "demo-mevulvne-kho1",
+      "title": "Notebook",
+      "steps": [
+        {
+          "action": "waitForInput"
+        },
+        {
+          "action": "open",
+          "path": "notebooks/titanic_data_exploration.ipynb"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevus6bv-ve47",
+      "title": "Export Notebook to Python",
+      "steps": [
+        {
+          "action": "open",
+          "path": "notebooks/data_exploration.ipynb"
+        },
+        {
+          "action": "executeVSCodeCommand",
+          "command": "jupyter.exportAsPythonScript"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevvoe1v-bvtm",
+      "title": "Save File Into \"app\" Folder",
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "workbench.action.files.saveAs",
+          "args": "/workspaces/streamlit-demo/app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevw4dl8-rr93",
+      "title": "Replace Cell Placeholders",
+      "steps": [
+        {
+          "action": "executeVSCodeCommand",
+          "command": "editor.action.startFindReplaceAction"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevut7za-xpdl",
+      "title": "Add Streamlit",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "import streamlit as st",
+          "position": "1",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character",
+          "insertTypingSpeed": 10,
+          "zoom": 3
+        },
+        {
+          "action": "highlight",
+          "position": "1:1",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevwqwdk-gfd2",
+      "title": "Title",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "8",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevwv358-jve8",
+      "title": "st.title()",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "st.title(\"Titanic Data Exploration\")",
+          "position": "8",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevww42u-9zg0",
+      "title": "Dataframe",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "24",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevwwpxi-0pv4",
+      "title": "st.dataframe()",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "st.dataframe(titanic_passengers_cleaned)",
+          "position": "24",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevx0p8p-s5uh",
+      "title": "Markdown",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "27:40",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevx2ghn-y9ki",
+      "title": "st.markdown()",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "st.markdown(\"\"\"\n## Exploratory Data Analysis\n \nUses convention:\n- 🟢: survived\n- 🔴: died\n- **N**: number of passengers\n- **S**: survival rate\n \nWhat factors contributed towards a passenger's survival rate?\n\n\n### Women and children first?\n\nThis analysis certainly shows a general trend that females were given priority.  It's not so convicing for children!\n\"\"\")\n",
+          "position": "24:37",
+          "highlightWholeLine": true,
+          "insertTypingMode": "line-by-line"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevxhhc3-lp1j",
+      "title": "Chart 1",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "46",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevxj8dg-dsm0",
+      "title": "st.plot()",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "st.plotly_chart(ChartingHelper.create_boxplot(titanic_passengers_cleaned, 'Sex', 'Age'))\n",
+          "position": "46",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character"
+        }
+      ]
+    },
+    {
+      "id": "demo-mevxr0df-3ee4",
+      "title": "Run App",
+      "steps": [
+        {
+          "action": "openTerminal"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd app",
+          "insertTypingMode": "instant"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "uv run streamlit run titanic_app.py",
+          "insertTypingMode": "character-by-character"
+        }
+      ]
+    }
+  ]
+}
