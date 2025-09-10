@@ -1,0 +1,58 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Demo 4 - Spinner",
+  "description": "",
+  "version": 2,
+  "demos": [
+    {
+      "id": "demo-mfbbe1i1-pkw9",
+      "title": "Set Up",
+      "steps": [
+        {
+          "action": "deleteFile",
+          "path": "app/titanic_app.py"
+        },
+        {
+          "action": "copy",
+          "path": ".demo/snippets/demo_4_start.py",
+          "dest": "app/titanic_app.py"
+        }
+      ],
+      "notes": {
+        "path": ".demo/notes/demo-mfbbe1i1-pkw9_notes.md"
+      }
+    },
+    {
+      "id": "demo-mfbbx3za-vmma",
+      "title": "Load Data",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "17",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfbbxoif-bbm0",
+      "title": "@st.spinner()",
+      "steps": [
+        {
+          "action": "replace",
+          "content": "with st.spinner(\"Loading Titanic data...\"):\n    titanic_passengers_raw = TitanicWrangler.load_titanic_data(RAW_DATA_PATH)",
+          "position": "17",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py",
+          "insertTypingMode": "line-by-line"
+        },
+        {
+          "action": "highlight",
+          "path": "app/titanic_app.py",
+          "position": "17:18",
+          "highlightWholeLine": true
+        }
+      ]
+    }
+  ]
+}

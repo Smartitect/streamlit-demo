@@ -1,0 +1,35 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Demo 0 - Hello World",
+  "description": "",
+  "version": 2,
+  "demos": [
+    {
+      "id": "demo-mfdwgexp-fntb",
+      "title": "Set Up",
+      "steps": [
+        {
+          "action": "copy",
+          "path": ".demo/snippets/demo_0_start.py",
+          "dest": "app/first_app.py"
+        }
+      ],
+      "icons": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "demo-mfdwbj3m-iepw",
+      "title": "Install Streamlit.",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "pyproject.toml",
+          "position": "12",
+          "highlightWholeLine": true
+        }
+      ]
+    }
+  ]
+}

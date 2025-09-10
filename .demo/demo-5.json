@@ -1,0 +1,78 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Demo 5 - Caching",
+  "description": "",
+  "version": 2,
+  "demos": [
+    {
+      "id": "demo-mfbbe1i1-pkw9",
+      "title": "Set Up",
+      "steps": [
+        {
+          "action": "deleteFile",
+          "path": "app/titanic_app.py"
+        },
+        {
+          "action": "copy",
+          "path": ".demo/snippets/demo_5_start.py",
+          "dest": "app/titanic_app.py"
+        }
+      ],
+      "notes": {
+        "path": ".demo/notes/demo-mfbbe1i1-pkw9_notes.md"
+      }
+    },
+    {
+      "id": "demo-mfbbx3za-vmma",
+      "title": "Load Data",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "18,29:18,78",
+          "highlightWholeLine": false,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfbbxoif-bbm0",
+      "title": "@st.cache()",
+      "steps": [
+        {
+          "action": "insert",
+          "content": "@st.cache_data(show_spinner=False)\ndef load_data():\n    return TitanicWrangler.load_titanic_data(RAW_DATA_PATH)\n",
+          "position": "16",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py",
+          "insertTypingMode": "line-by-line"
+        },
+        {
+          "action": "highlight",
+          "path": "app/titanic_app.py",
+          "position": "16:18",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "id": "demo-mfbc36xt-3upl",
+      "title": "Call New Function",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "content": "    titanic_passengers_raw = load_data()",
+          "position": "21",
+          "highlightWholeLine": true,
+          "insertTypingMode": "character-by-character"
+        },
+        {
+          "action": "highlight",
+          "path": "app/titanic_app.py",
+          "position": "21",
+          "highlightWholeLine": true
+        }
+      ]
+    }
+  ]
+}

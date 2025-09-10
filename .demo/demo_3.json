@@ -1,0 +1,123 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Demo 3 - Interactivity",
+  "description": "",
+  "version": 2,
+  "demos": [
+    {
+      "id": "demo-mf1jetk6-0gxj",
+      "title": "Set Up",
+      "steps": [
+        {
+          "action": "deleteFile",
+          "path": "app/titanic_app.py"
+        },
+        {
+          "action": "copy",
+          "path": ".demo/snippets/demo_3_start.py",
+          "dest": "app/titanic_app.py",
+          "disabled": false
+        }
+      ],
+      "icons": {
+        "start": "target",
+        "end": ""
+      },
+      "description": "Setup for the demo."
+    },
+    {
+      "id": "demo-mfb5ixnv-0hsa",
+      "title": "Sidebar",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "26:35",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb5labr-dsqj",
+      "title": "st.radio()",
+      "steps": [
+        {
+          "action": "insert",
+          "position": "37",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py",
+          "insertTypingMode": "line-by-line",
+          "contentPath": ".demo/snippets/demo_3_radio.py"
+        },
+        {
+          "action": "highlight",
+          "position": "37:40",
+          "highlightWholeLine": false,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb75tfq-8m47",
+      "title": "'topic'",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "37,4:37,9",
+          "highlightWholeLine": false,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb734tb-g9mp",
+      "title": "Topic Driving Charts",
+      "steps": [
+        {
+          "action": "replace",
+          "path": "app/titanic_app.py",
+          "contentPath": ".demo/snippets/demo_3_topic_driven_charts.py",
+          "position": "42:67",
+          "highlightWholeLine": true,
+          "insertTypingMode": "line-by-line"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb77q0d-6p9s",
+      "title": "Woman and Children",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "42:49",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb78xyg-8kpb",
+      "title": "Wealth",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "51:58",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb79rdr-sj0g",
+      "title": "Occupation",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "60:67",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    }
+  ]
+}

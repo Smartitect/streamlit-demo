@@ -13,12 +13,8 @@ st.title("Titanic Data Exploration")
 RAW_DATA_PATH = Path("../data/input/titanic_passengers.csv")
 assert RAW_DATA_PATH.exists(), f"Raw data file not found at {RAW_DATA_PATH}"
 
-@st.cache_data(show_spinner=False)
-def load_data():
-    return TitanicWrangler.load_titanic_data(RAW_DATA_PATH)
 
-with st.spinner("Loading Titanic data..."):
-    titanic_passengers_raw = load_data()
+titanic_passengers_raw = TitanicWrangler.load_titanic_data(RAW_DATA_PATH)
 
 
 titanic_passengers_cleaned = TitanicWrangler.prepare_data(titanic_passengers_raw)

@@ -1,6 +1,6 @@
 {
   "$schema": "https://demotime.show/demo-time.schema.json",
-  "title": "demo-1",
+  "title": "Demo 1 - Basic App",
   "description": "",
   "version": 2,
   "demos": [
@@ -19,10 +19,20 @@
         }
       ],
       "icons": {
-        "start": "target",
+        "start": "",
         "end": ""
       },
       "description": "Setup for the demo."
+    },
+    {
+      "id": "demo-mfbbj9wd-udk7",
+      "title": "Empty App",
+      "steps": [
+        {
+          "action": "open",
+          "path": "app/titanic_app.py"
+        }
+      ]
     },
     {
       "id": "demo-mevulvne-kho1",
@@ -99,7 +109,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "8",
+          "position": "7",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -113,7 +123,7 @@
           "action": "replace",
           "path": "app/titanic_app.py",
           "content": "st.title(\"Titanic Data Exploration\")",
-          "position": "8",
+          "position": "7",
           "highlightWholeLine": true,
           "insertTypingMode": "character-by-character"
         }
@@ -125,7 +135,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "24",
+          "position": "23",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -139,7 +149,7 @@
           "action": "replace",
           "path": "app/titanic_app.py",
           "content": "st.dataframe(titanic_passengers_cleaned)",
-          "position": "24",
+          "position": "23",
           "highlightWholeLine": true,
           "insertTypingMode": "character-by-character"
         }
@@ -151,7 +161,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "27:33",
+          "position": "26:32",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -165,7 +175,7 @@
           "action": "replace",
           "path": "app/titanic_app.py",
           "content": "st.markdown(\"\"\"\n## Exploratory Data Analysis\n\nWe now explore factors that appear to have contributed towards survival rates on the Titanic 🚢.\n\nKey🔑:\n- **N**=number of passengers\n- **S**=survival rate\n\"\"\")",
-          "position": "27:33",
+          "position": "26:32",
           "highlightWholeLine": true,
           "insertTypingMode": "line-by-line"
         }
@@ -177,7 +187,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "43",
+          "position": "42",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -191,7 +201,7 @@
           "action": "replace",
           "path": "app/titanic_app.py",
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Sex', 'Age'))",
-          "position": "43",
+          "position": "42",
           "highlightWholeLine": true,
           "insertTypingMode": "character-by-character",
           "insertTypingSpeed": 1
@@ -204,7 +214,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "51",
+          "position": "50",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -218,7 +228,7 @@
           "action": "replace",
           "path": "app/titanic_app.py",
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Pclass', 'FareLog10'))",
-          "position": "51",
+          "position": "50",
           "highlightWholeLine": true,
           "insertTypingMode": "character-by-character",
           "insertTypingSpeed": 1
@@ -231,7 +241,7 @@
       "steps": [
         {
           "action": "highlight",
-          "position": "59",
+          "position": "58",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }
@@ -245,7 +255,7 @@
           "action": "replace",
           "path": "app/titanic_app.py",
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Title', 'Age'))",
-          "position": "59",
+          "position": "58",
           "highlightWholeLine": true,
           "insertTypingMode": "character-by-character",
           "insertTypingSpeed": 1
@@ -261,7 +271,7 @@
         },
         {
           "action": "executeTerminalCommand",
-          "command": "cd app",
+          "command": "cd /workspaces/streamlit-demo/app",
           "insertTypingMode": "instant"
         },
         {

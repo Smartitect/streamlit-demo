@@ -1,0 +1,94 @@
+{
+  "$schema": "https://demotime.show/demo-time.schema.json",
+  "title": "Demo 2 - Expander & Sidebar",
+  "description": "",
+  "version": 2,
+  "demos": [
+    {
+      "id": "demo-mf1jetk6-0gxj",
+      "title": "Set Up",
+      "steps": [
+        {
+          "action": "deleteFile",
+          "path": "app/titanic_app.py"
+        },
+        {
+          "action": "copy",
+          "path": ".demo/snippets/demo_2_start.py",
+          "dest": "app/titanic_app.py",
+          "disabled": false
+        }
+      ],
+      "icons": {
+        "start": "",
+        "end": ""
+      },
+      "description": "Setup for the demo."
+    },
+    {
+      "id": "demo-mfb5ixnv-0hsa",
+      "title": "Passenger Details",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "23",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb5labr-dsqj",
+      "title": "st.expander()",
+      "steps": [
+        {
+          "action": "replace",
+          "position": "23",
+          "highlightWholeLine": true,
+          "content": "st.expander(\"View Passenger Details\").dataframe(titanic_passengers_cleaned)",
+          "path": "app/titanic_app.py",
+          "insertTypingMode": "character-by-character"
+        },
+        {
+          "action": "highlight",
+          "position": "23,0:23,37",
+          "highlightWholeLine": false,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb5q13q-iq31",
+      "title": "Sidebar Content",
+      "steps": [
+        {
+          "action": "highlight",
+          "position": "26:34",
+          "highlightWholeLine": true,
+          "content": "with st.sidebar:\n    st.markdown(\"\"\"\n    ## Exploratory Data Analysis\n\n    Explore factors that appear to have contributed towards survival rates on the Titanic 🚢.\n\n    Key🔑:\n    - **N**=number of passengers\n    - **S**=survival rate\n    \"\"\")\n    \n    topic = st.container().radio(\n        \"Choose the topic you want to explore:\",\n        [\"Women and Children\", \"Wealth\", \"Occupation\"]\n    )\n\n    st.markdown(\"\"\"\n    Key🔑:\n    - **N**=number of passengers\n    - **S**=survival rate\n    \"\"\")",
+          "path": "app/titanic_app.py"
+        }
+      ]
+    },
+    {
+      "id": "demo-mfb6840z-ui11",
+      "title": "st.sidebar()",
+      "steps": [
+        {
+          "action": "replace",
+          "position": "26:34",
+          "highlightWholeLine": true,
+          "content": "with st.sidebar:\n    st.markdown(\"\"\"\n    ## Exploratory Data Analysis\n\n    Explore factors that appear to have contributed towards survival rates on the Titanic 🚢.\n\n    Key🔑:\n    - **N**=number of passengers\n    - **S**=survival rate\n    \"\"\")",
+          "path": "app/titanic_app.py",
+          "insertTypingMode": "line-by-line"
+        },
+        {
+          "action": "highlight",
+          "position": "26",
+          "highlightWholeLine": true,
+          "path": "app/titanic_app.py"
+        }
+      ]
+    }
+  ]
+}
