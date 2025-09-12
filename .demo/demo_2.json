@@ -17,6 +17,10 @@
           "path": ".demo/snippets/demo_2_start.py",
           "dest": "app/titanic_app.py",
           "disabled": false
+        },
+        {
+          "action": "open",
+          "path": "app/titanic_app.py"
         }
       ],
       "icons": {

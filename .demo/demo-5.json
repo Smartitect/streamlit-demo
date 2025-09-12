@@ -16,6 +16,10 @@
           "action": "copy",
           "path": ".demo/snippets/demo_5_start.py",
           "dest": "app/titanic_app.py"
+        },
+        {
+          "action": "open",
+          "path": "app/titanic_app.py"
         }
       ],
       "notes": {
@@ -40,7 +44,7 @@
       "steps": [
         {
           "action": "insert",
-          "content": "@st.cache_data(show_spinner=False)\ndef load_data():\n    return TitanicWrangler.load_titanic_data(RAW_DATA_PATH)\n",
+          "content": "@st.cache_data()\ndef load_data():\n    return TitanicWrangler.load_titanic_data(RAW_DATA_PATH)\n",
           "position": "16",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py",
@@ -55,21 +59,33 @@
       ]
     },
     {
+      "title": "Replace Expander",
+      "description": "",
+      "steps": [
+        {
+          "action": "highlight",
+          "path": "/app/titanic_app.py",
+          "position": "20:21",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
       "id": "demo-mfbc36xt-3upl",
       "title": "Call New Function",
       "steps": [
         {
           "action": "replace",
           "path": "app/titanic_app.py",
-          "content": "    titanic_passengers_raw = load_data()",
-          "position": "21",
+          "content": "titanic_passengers_raw = load_data()",
+          "position": "20:21",
           "highlightWholeLine": true,
           "insertTypingMode": "character-by-character"
         },
         {
           "action": "highlight",
           "path": "app/titanic_app.py",
-          "position": "21",
+          "position": "20",
           "highlightWholeLine": true
         }
       ]

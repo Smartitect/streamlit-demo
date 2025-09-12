@@ -17,10 +17,14 @@
           "path": ".demo/snippets/demo_3_start.py",
           "dest": "app/titanic_app.py",
           "disabled": false
+        },
+        {
+          "action": "open",
+          "path": "app/titanic_app.py"
         }
       ],
       "icons": {
-        "start": "target",
+        "start": "",
         "end": ""
       },
       "description": "Setup for the demo."
@@ -90,30 +94,6 @@
         {
           "action": "highlight",
           "position": "42:49",
-          "highlightWholeLine": true,
-          "path": "app/titanic_app.py"
-        }
-      ]
-    },
-    {
-      "id": "demo-mfb78xyg-8kpb",
-      "title": "Wealth",
-      "steps": [
-        {
-          "action": "highlight",
-          "position": "51:58",
-          "highlightWholeLine": true,
-          "path": "app/titanic_app.py"
-        }
-      ]
-    },
-    {
-      "id": "demo-mfb79rdr-sj0g",
-      "title": "Occupation",
-      "steps": [
-        {
-          "action": "highlight",
-          "position": "60:67",
           "highlightWholeLine": true,
           "path": "app/titanic_app.py"
         }

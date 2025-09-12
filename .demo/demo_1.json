@@ -16,6 +16,14 @@
           "action": "create",
           "path": "app/titanic_app.py",
           "content": "# Empty file!"
+        },
+        {
+          "action": "closeTerminal",
+          "terminalId": "titanic"
+        },
+        {
+          "action": "open",
+          "path": "app/titanic_app.py"
         }
       ],
       "icons": {
@@ -23,16 +31,6 @@
         "end": ""
       },
       "description": "Setup for the demo."
-    },
-    {
-      "id": "demo-mfbbj9wd-udk7",
-      "title": "Empty App",
-      "steps": [
-        {
-          "action": "open",
-          "path": "app/titanic_app.py"
-        }
-      ]
     },
     {
       "id": "demo-mevulvne-kho1",
@@ -203,8 +201,8 @@
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Sex', 'Age'))",
           "position": "42",
           "highlightWholeLine": true,
-          "insertTypingMode": "character-by-character",
-          "insertTypingSpeed": 1
+          "insertTypingMode": "line-by-line",
+          "insertTypingSpeed": 10
         }
       ]
     },
@@ -230,8 +228,8 @@
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Pclass', 'FareLog10'))",
           "position": "50",
           "highlightWholeLine": true,
-          "insertTypingMode": "character-by-character",
-          "insertTypingSpeed": 1
+          "insertTypingMode": "line-by-line",
+          "insertTypingSpeed": 10
         }
       ]
     },
@@ -257,8 +255,8 @@
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Title', 'Age'))",
           "position": "58",
           "highlightWholeLine": true,
-          "insertTypingMode": "character-by-character",
-          "insertTypingSpeed": 1
+          "insertTypingMode": "line-by-line",
+          "insertTypingSpeed": 10
         }
       ]
     },
@@ -267,17 +265,26 @@
       "title": "Run App",
       "steps": [
         {
-          "action": "openTerminal"
+          "action": "openTerminal",
+          "terminalId": "titanic"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "terminalId": "titanic",
+          "command": "clear"
         },
         {
           "action": "executeTerminalCommand",
           "command": "cd /workspaces/streamlit-demo/app",
-          "insertTypingMode": "instant"
+          "insertTypingMode": "instant",
+          "terminalId": "titanic"
         },
         {
           "action": "executeTerminalCommand",
           "command": "uv run streamlit run titanic_app.py",
-          "insertTypingMode": "character-by-character"
+          "insertTypingMode": "character-by-character",
+          "autoExecute": false,
+          "terminalId": "titanic"
         }
       ]
     }

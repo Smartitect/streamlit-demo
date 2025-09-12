@@ -9,9 +9,21 @@
       "title": "Set Up",
       "steps": [
         {
+          "action": "deleteFile",
+          "path": "app/first_app.py"
+        },
+        {
           "action": "copy",
           "path": ".demo/snippets/demo_0_start.py",
           "dest": "app/first_app.py"
+        },
+        {
+          "action": "closeTerminal",
+          "terminalId": "hello_world"
+        },
+        {
+          "action": "open",
+          "path": "app/first_app.py"
         }
       ],
       "icons": {
@@ -20,13 +32,107 @@
       }
     },
     {
-      "id": "demo-mfdwbj3m-iepw",
-      "title": "Install Streamlit.",
+      "id": "demo-mfe1ubrn-fime",
+      "title": "Import Streamlit",
       "steps": [
         {
+          "action": "insert",
+          "path": "app/first_app.py",
+          "position": "2",
+          "highlightWholeLine": true,
+          "content": "import streamlit as st",
+          "insertTypingMode": "character-by-character"
+        },
+        {
           "action": "highlight",
-          "path": "pyproject.toml",
-          "position": "12",
+          "path": "app/first_app.py",
+          "position": "2",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "id": "demo-mfe1x882-3hyj",
+      "title": "Add Title",
+      "steps": [
+        {
+          "action": "insert",
+          "path": "app/first_app.py",
+          "position": "4",
+          "highlightWholeLine": true,
+          "content": "st.title(\"Hello DATA:Scotland 2025!\")",
+          "insertTypingMode": "character-by-character"
+        },
+        {
+          "action": "highlight",
+          "path": "app/first_app.py",
+          "position": "4",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "id": "demo-mffhp5rw-reyc",
+      "title": "Run App",
+      "steps": [
+        {
+          "action": "executeTerminalCommand",
+          "command": "clear",
+          "terminalId": "hello_world"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "cd app",
+          "terminalId": "hello_world"
+        },
+        {
+          "action": "executeTerminalCommand",
+          "command": "uv run streamlit run first_app.py",
+          "autoExecute": false,
+          "terminalId": "hello_world"
+        }
+      ],
+      "icons": {
+        "start": "",
+        "end": ""
+      }
+    },
+    {
+      "id": "demo-mfe23g6w-ytow",
+      "title": "Add Markdown",
+      "steps": [
+        {
+          "action": "insert",
+          "path": "app/first_app.py",
+          "position": "6",
+          "highlightWholeLine": true,
+          "insertTypingMode": "line-by-line",
+          "contentPath": ".demo/snippets/demo_0_markdown.md"
+        },
+        {
+          "action": "highlight",
+          "path": "app/first_app.py",
+          "position": "6:12",
+          "highlightWholeLine": true
+        }
+      ]
+    },
+    {
+      "id": "demo-mfe2dfen-vc3z",
+      "title": "Add Image",
+      "steps": [
+        {
+          "action": "insert",
+          "path": "app/first_app.py",
+          "position": "14",
+          "highlightWholeLine": true,
+          "insertTypingMode": "line-by-line",
+          "content": "st.image(\"../assets/data_scotland_after_party.png\")"
+        },
+        {
+          "action": "highlight",
+          "path": "app/first_app.py",
+          "position": "14",
           "highlightWholeLine": true
         }
       ]

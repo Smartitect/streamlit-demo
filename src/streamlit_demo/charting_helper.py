@@ -71,13 +71,6 @@ class ChartingHelper:
                 trace.marker.size = ChartingHelper.POINT_SIZE
                 trace.marker.opacity = ChartingHelper.POINT_OPACITY
                 trace.marker.line = dict(width=0.5, color='white')
-                trace.hovertemplate = ('<b>%{customdata[0]}</b><br>' +
-                                     'Sex: %{customdata[1]}<br>' +
-                                     'Age: %{customdata[2]}<br>' +
-                                     'Class: %{customdata[3]}<br>' +
-                                     'Embarked: %{customdata[4]}<br>' +
-                                     '%{yaxis.title.text}: %{y}<br>' +
-                                     '<extra></extra>')
         
         # Add box plots on top using Polars data
         unique_categories = clean_data[x_axis].unique().sort()
@@ -96,7 +89,7 @@ class ChartingHelper:
         
         # Create x-axis tick labels with counts and survival rates using Polars data
         unique_categories_for_labels = clean_data[x_axis].unique().sort().to_list()
-        tick_labels = [f"{cat}<br>(n={category_counts[cat]}, s={survival_rates[cat]:.1f}%)" for cat in unique_categories_for_labels]
+        tick_labels = [f"{cat}<br>(N={category_counts[cat]}, S={survival_rates[cat]:.1f}%)" for cat in unique_categories_for_labels]
         
         # Update layout
         fig.update_layout(

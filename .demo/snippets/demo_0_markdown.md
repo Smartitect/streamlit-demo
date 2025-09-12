@@ -1,8 +1,3 @@
-# First Streamlit app!
-import streamlit as st
-
-st.title("Hello DATA:Scotland 2025!")
-
 st.write("""
 In this talk, you are going to learn how to build a data app using [Streamlit](https://streamlit.io/), 
 a popular open-source framework for creating interactive web applications in Python.
@@ -10,6 +5,3 @@ a popular open-source framework for creating interactive web applications in Pyt
 Hope to see you at the after party! 🎉
 
 """)
-
-st.image("../assets/data_scotland_after_party.png")
-

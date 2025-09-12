@@ -16,6 +16,10 @@
           "action": "copy",
           "path": ".demo/snippets/demo_4_start.py",
           "dest": "app/titanic_app.py"
+        },
+        {
+          "action": "open",
+          "path": "app/titanic_app.py"
         }
       ],
       "notes": {
