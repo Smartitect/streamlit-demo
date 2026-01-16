@@ -5,7 +5,7 @@
   "version": 2,
   "demos": [
     {
-      "id": "demo-mf1jetk6-0gxj",
+      "id": "demo-mf1jetk6-0gxj3",
       "title": "Set Up",
       "steps": [
         {
@@ -30,7 +30,7 @@
       "description": "Setup for the demo."
     },
     {
-      "id": "demo-mfb5ixnv-0hsa",
+      "id": "demo-mfb5ixnv-0hsa2",
       "title": "Sidebar",
       "steps": [
         {
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "id": "demo-mfb5labr-dsqj",
+      "id": "demo-mfb5labr-dsqj2",
       "title": "st.radio()",
       "steps": [
         {

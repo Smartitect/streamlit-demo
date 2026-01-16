@@ -201,7 +201,7 @@
           "content": "st.plotly_chart(ChartingHelper.create_strip_boxplot(titanic_passengers_cleaned, 'Sex', 'Age'))",
           "position": "42",
           "highlightWholeLine": true,
-          "insertTypingMode": "line-by-line",
+          "insertTypingMode": "character-by-character",
           "insertTypingSpeed": 10
         }
       ]

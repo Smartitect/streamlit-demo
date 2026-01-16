@@ -60,7 +60,7 @@
           "path": "app/first_app.py",
           "position": "4",
           "highlightWholeLine": true,
-          "content": "st.title(\"Hello DATA:Scotland 2025!\")",
+          "content": "st.title(\"Hello World!\")",
           "insertTypingMode": "character-by-character"
         },
         {
@@ -112,7 +112,7 @@
         {
           "action": "highlight",
           "path": "app/first_app.py",
-          "position": "6:12",
+          "position": "6:11",
           "highlightWholeLine": true
         }
       ]
@@ -124,15 +124,15 @@
         {
           "action": "insert",
           "path": "app/first_app.py",
-          "position": "14",
+          "position": "13",
           "highlightWholeLine": true,
           "insertTypingMode": "line-by-line",
-          "content": "st.image(\"../assets/data_scotland_after_party.png\")"
+          "content": "st.image(\"../assets/endjin-logo.svg\")"
         },
         {
           "action": "highlight",
           "path": "app/first_app.py",
-          "position": "14",
+          "position": "13",
           "highlightWholeLine": true
         }
       ]

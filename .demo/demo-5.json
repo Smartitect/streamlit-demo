@@ -5,7 +5,7 @@
   "version": 2,
   "demos": [
     {
-      "id": "demo-mfbbe1i1-pkw9",
+      "id": "demo-mfbbe1i1-pkw92",
       "title": "Set Up",
       "steps": [
         {
@@ -27,7 +27,7 @@
       }
     },
     {
-      "id": "demo-mfbbx3za-vmma",
+      "id": "demo-mfbbx3za-vmma2",
       "title": "Load Data",
       "steps": [
         {
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "id": "demo-mfbbxoif-bbm0",
+      "id": "demo-mfbbxoif-bbm02",
       "title": "@st.cache()",
       "steps": [
         {
